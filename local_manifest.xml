@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="samm-git" fetch="git://github.com/" />
+  <project revision="master" path="device/alcatel/OT993D" remote="samm-git" name="samm-git/device_alcatel_OT993D" />
+  <project path="bootable/recovery" remote="samm-git" name="samm-git/android_bootable_recovery" />
+  <project revision="master" path="kernel/alcatel/OT993D" remote="samm-git" name="samm-git/alcatel_ot993D_kernel" />
+</manifest>
