@@ -1,0 +1,3 @@
+Device description to build Alcatel OT993D Recovery Image
+
+TODO: Integrate kernel build and enable export of /emmc partition
