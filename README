@@ -7,4 +7,8 @@ To build
 4) lunch full_OT993D-eng
 5) make recoveryimage -j8
 
-TODO: integrate properly with CM10 build system.
+Links:
+ - Modified CWM - https://github.com/samm-git/android_bootable_recovery
+ - Kernel - https://github.com/samm-git/alcatel_ot993D_kernel
+
+TODO: integrate properly with CM10 build system and make test build.
