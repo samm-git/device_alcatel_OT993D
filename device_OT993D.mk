@@ -6,13 +6,15 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 $(call inherit-product-if-exists, vendor/alcatel/OT993D/993D-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/alcatel/OT993D/overlay
-
 LOCAL_PATH := device/alcatel/OT993D
 
+# see http://wiki.cyanogenmod.org/w/Doc:_integrated_kernel_building
 TARGET_KERNEL_CONFIG := ot993d_defconfig
 # fallback
 TARGET_PREBUILT_KERNEL := device/alcatel/OT993D/kernel
 
+# rmt_storage on recovery required to avoid watchdog reboots
+# we are using patched version to load from /vendor/* directory
 PRODUCT_COPY_FILES += \
 	$(shell mkdir -p $OUT/recovery/root/vendor) \
 	device/alcatel/OT993D/vendor/bin/linker:recovery/root/vendor/bin/linker \
