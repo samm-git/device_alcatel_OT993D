@@ -1,3 +1,10 @@
 Device description to build Alcatel OT993D Recovery Image
 
+To build
+1) Copy local_manifest.xml to .repo/
+2) do "repo sync" from source root
+3) . build/envsetup.sh
+4) lunch full_OT993D-eng
+5) make recoveryimage -j8
+
 TODO: integrate properly with CM10 build system.
