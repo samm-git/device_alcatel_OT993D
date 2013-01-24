@@ -17,12 +17,12 @@ on init
     mkdir /system
     mkdir /data
     mkdir /cache
-    mount /tmp /tmp tmpfs
+    mkdir /custpack
+    mount tmpfs tmpfs /tmp
     exec /system/bin/sleep 5
     mount ext4 /dev/block/mmcblk0p14 /data
     mount ext4 /dev/block/mmcblk0p16 /cache
     mount ext4 /dev/block/mmcblk0p13 /system
-    symlink /system/etc /etc
     chown root shell /tmp
     chmod 0775 /tmp
     # workaround for mkbootfs limitation
@@ -34,8 +34,8 @@ on init
     write /sys/class/android_usb/android0/idVendor 18D1
     write /sys/class/android_usb/android0/idProduct D001
     write /sys/class/android_usb/android0/functions adb,mass_storage
-    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
+    write /sys/class/android_usb/android0/iManufacturer Alcatel
+    write /sys/class/android_usb/android0/iProduct OT993D
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
     # should improve performance
     write /sys/devices/platform/msm_hsusb/gadget/lun0/nofua 1
@@ -43,14 +43,12 @@ on init
     write /sys/class/android_usb/android0/enable 1
 
 on boot
-
     ifup lo
     hostname localhost
     domainname localdomain
     class_start default
 
 on charger
-
     ifup lo
     hostname localhost
     domainname localdomain
