@@ -25,7 +25,7 @@ BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 
 # some platform specific settings, not currently in use
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM: = msm7x27a
+TARGET_BOARD_PLATFORM := msm7x27a
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -40,3 +40,17 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_QCOM_FM := true
+
+# we should use libaudio from arora 
+# Additional libraries
+##TARGET_PROVIDES_LIBAUDIO := true
+##BOARD_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+
+
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_LIBS := true
+BOARD_USES_QCOM_LIBRPC := true
+
+BOARD_HAVE_QCOM_FM := true
+BOARD_HAVE_BLUETOOTH:= true
