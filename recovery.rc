@@ -31,8 +31,8 @@ on init
     write /tmp/.ignorebootmessage 1
     write /sys/module/kernel/parameters/panic 3
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18D1
-    write /sys/class/android_usb/android0/idProduct D001
+    write /sys/class/android_usb/android0/idVendor 05c6
+    write /sys/class/android_usb/android0/idProduct 9018
     write /sys/class/android_usb/android0/functions adb,mass_storage
     write /sys/class/android_usb/android0/iManufacturer Alcatel
     write /sys/class/android_usb/android0/iProduct OT993D

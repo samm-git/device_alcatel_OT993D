@@ -16,7 +16,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 
 # recovery name and rev
 RECOVERY_NAME := CWM/OT993D Recovery
-RECOVERY_REVISION := r5
+RECOVERY_REVISION := r6
 # recovery settings
 BOARD_HAS_NO_SELECT_BUTTON := false
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
